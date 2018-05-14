@@ -5,7 +5,7 @@
 Using Composer
 
 ```
-composer require larvelcode/panel
+composer require larvelcode/panel:dev-master
 ```
 
 Add the service provider to `config/app.php`
