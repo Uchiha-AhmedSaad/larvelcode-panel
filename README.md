@@ -1,2 +1,0 @@
-# larvelcode-panel
-larvel Adminpanel
