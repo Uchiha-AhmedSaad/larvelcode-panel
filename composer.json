@@ -1,0 +1,29 @@
+{
+    "name": "larvelcode/panel",
+    "description": "larvel Adminpanel ",
+    "keywords":["Laravel","Adminpanel"],
+    "license": "MIT",
+    "version":"1.0",
+    "authors": [
+        {
+            "name": "Ahmed Saad",
+            "email": "ahmed@4serv.net"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "barryvdh/laravel-debugbar": "^3.1",
+        "codecourse/notify": "^1.1",
+        "laravelcollective/html": "^5.5",
+        "larvelcode/cagcategories": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "larvelcode\\panel":"src/"
+        },
+        "files":[
+            "app/helper/helpermethodbackdata.php"
+        ]
+    },
+    "minimum-stability": "dev"
+}
