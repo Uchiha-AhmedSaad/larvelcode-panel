@@ -16,7 +16,10 @@
     "autoload": {
         "psr-4": {
             "larvelcode\\panel\\":"src/"
-        }
+        },
+        "files":[
+            "src/app/helper/helpermethodbackdata.php"
+        ]
     },
     "minimum-stability": "dev"
 }
