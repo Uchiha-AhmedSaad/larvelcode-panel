@@ -1,0 +1,21 @@
+.img-select{
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 10px;
+}
+.img-haverover:hover{
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 10px;	 
+}
+	.img-marg{
+	margin: 15px 0px 2px 0px;
+}
+.img-button{
+	position: absolute;
+	right: 40px;
+}
+.img-delete{
+	position: absolute;
+	left: 25px;
+}
