@@ -18,7 +18,7 @@
             "larvelcode\\panel\\":"src/"
         },
         "files": [
-        "src/functions/helperfunction.php"
+        "src/app/helper/helpermethodbackdata.php"
         ]
     },
     "minimum-stability": "dev"
