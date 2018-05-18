@@ -3,6 +3,10 @@ Have you encountered a problem that you want to work the control panel for Admin
 
 ## Install
 
+Note:- you must make laravel like in real server i give you an example:-
+1- rename server.php to index.php
+2- copy .htaccess from public directory to your larvel project main directory i mean in your larvel project directory 
+
 Using Composer
 
 ```
