@@ -2,6 +2,11 @@
 Have you encountered a problem that you want to work the control panel for Admin quickly without consuming your time  now you can do it with the larvelcode-panel  Now you can work  without wasting your valuable time We help you make a control panel one  click 
 
 ## Install
+first you setup laravel framwork by enter this :-
+```php
+composer create-project --prefer-dist laravel/laravel blog
+```
+Remove word blog and write your folder project name.
 
 ## Note:- you must make laravel like in real server i give you an example:-
 1- rename server.php to index.php
