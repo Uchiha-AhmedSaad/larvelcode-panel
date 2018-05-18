@@ -40,8 +40,8 @@ From your application,  in your controller.
 
 ```
 php artisan storage:link
-php artisan make:auth
 
+php artisan make:auth
 
 php artisan vendor:publish
 
