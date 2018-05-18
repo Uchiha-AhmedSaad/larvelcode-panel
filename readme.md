@@ -19,12 +19,7 @@ Using Composer
 ```
 composer require larvelcode/panel:dev-master
 ``` 
-composer.json file search for require and add this packages in the end of it 
 
-```php
-        "codecourse/notify": "^1.1",
-        "laravelcollective/html": "^5.5"
-```
 Add the service provider to `config/app.php`
 
 ```php
