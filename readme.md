@@ -28,7 +28,7 @@ add to aliases
         'Notify' => Codecourse\Notify\Facades\Notify::class,
 ```
 
-In kernal.php
+open app/Http/kernal.php on protected $routeMiddleware add this
 ```php
 'admin'      =>\App\Http\Middleware\IsAdmin::class,
 ```
