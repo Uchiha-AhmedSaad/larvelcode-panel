@@ -1,4 +1,5 @@
 
+Have you encountered a problem that you want to work the control panel for Admin quickly without consuming your time  now you can do it with the larvelcode-panel  Now you can work  without wasting your valuable time We help you make a control panel one  click 
 
 ## Install
 
