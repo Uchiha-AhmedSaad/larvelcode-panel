@@ -113,4 +113,45 @@ class helperfunction
 		}
 		return response()->json($target_selected_id);
    }
+   public static function my_route()
+   {
+        $array = array(
+        "/* Welcome in My Adminpanel */".PHP_EOL,
+          "Auth::routes();".PHP_EOL,
+          "Route::get('/adminpanel' , 'admincpcontroller@index')->name('mainpage');".PHP_EOL,
+          "Route::get('adminpanel/users', 'userscontroller@index'  )->name('allusers');".PHP_EOL,
+          
+          "Route::get('adminpanel/create_registration', 
+          'userscontroller@create' )->name('create_registration');".PHP_EOL,
+
+          "Route::post('/adminpanel/store_registration', 
+          'userscontroller@store'  )->name('store_registration');".PHP_EOL,
+
+          "Route::get('adminpanel/edit_user/{slug}', 
+          'userscontroller@edit'   )->name('edit_user');".PHP_EOL,
+
+          "Route::patch('adminpanel/update_userinfo/{slug}', 
+          'userscontroller@update' )->name('update_userinfo');".PHP_EOL,
+
+          "Route::post('adminpanel/delete_users', 
+          'userscontroller@destory')->name('delete_user');".PHP_EOL,
+
+          "Route::post('adminpanel/delete_all_users', 
+          'userscontroller@destoryall')->name('delete_all_users');".PHP_EOL,
+
+          "Route::post('adminpanel/users/select_user_picture',
+          'userscontroller@select_picutre')->name('select_user_picture');".PHP_EOL,
+
+          "Route::post('adminpanel/users/delete_user_picture','userscontroller@delete_picture')->name('delete_user_picture');".PHP_EOL
+        ); 
+        return $array;
+   }
+	public static function if_route_exist()
+	{
+      $routes_web = file_get_contents('routes/web.php');
+      $search_routes = strpos($routes_web, 'Welcome in My Adminpanel');
+      if (!$search_routes) {
+        file_put_contents('routes/web.php',helperfunction::my_route(), FILE_APPEND | LOCK_EX);
+      }
+	}
 }

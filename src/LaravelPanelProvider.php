@@ -3,6 +3,7 @@
 namespace larvelcode\panel;
 
 use Illuminate\Support\ServiceProvider;
+use larvelcode\panel\functions\helperfunction;
 use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\userpicture;
@@ -11,15 +12,9 @@ use File;
 class LaravelPanelProvider extends ServiceProvider
 {
     public function boot()
-    {
-
-        $this->scan_file_exists( __DIR__."/Database",'database/migrations');
-        $this->scan_file_exists( __DIR__."/app",'app');
-        $this->scan_file_exists( __DIR__."/public",'public');
-        $this->scan_file_exists( __DIR__."/public/css",'public/css');
-        $this->scan_file_exists( __DIR__."/public/js",'public/js');
-        $this->scan_file_exists( __DIR__."/views",'resources/views');
+    { 
         $this->userimage();
+        $this->existing_routes();
     }
     /**
      * Register bindings in the container.
@@ -37,7 +32,8 @@ class LaravelPanelProvider extends ServiceProvider
                 ->where('picture_value','=','true')->get(['picture']));
         });
     }
-    private function scan_file_exists($scan_directory,$scan_file_exists){
+    private function scan_file_exists($scan_directory,$scan_file_exists)
+    {
         /*
            * $scan_directory :- the directory contain file  we need to copied .
            * $scan_file_exists :- the directory we need to scan file exists.
@@ -53,6 +49,18 @@ class LaravelPanelProvider extends ServiceProvider
           }
           $this->publishes([$scan_directory => base_path($scan_file_exists)]);
         }
-   
+    }
+    private function existing_routes()
+    {
+       helperfunction::if_route_exist();
+       if (!file_exists(base_path('app/helper/helpermethodbackdata.php')))
+       {
+          $this->scan_file_exists( __DIR__."/Database",'database/migrations');
+          $this->scan_file_exists( __DIR__."/app",'app');
+          $this->scan_file_exists( __DIR__."/public",'public');
+          $this->scan_file_exists( __DIR__."/public/css",'public/css');
+          $this->scan_file_exists( __DIR__."/public/js",'public/js');
+          $this->scan_file_exists( __DIR__."/views",'resources/views');
+       }
     }
 }
