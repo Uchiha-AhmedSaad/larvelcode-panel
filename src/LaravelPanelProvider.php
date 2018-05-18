@@ -9,6 +9,7 @@ use App\User;
 use App\userpicture;
 use File;
 
+
 class LaravelPanelProvider extends ServiceProvider
 {
     public function boot()
@@ -61,6 +62,7 @@ class LaravelPanelProvider extends ServiceProvider
           $this->scan_file_exists( __DIR__."/public/css",'public/css');
           $this->scan_file_exists( __DIR__."/public/js",'public/js');
           $this->scan_file_exists( __DIR__."/views",'resources/views');
+          $this->scan_file_exists( __DIR__."/views/layouts",'resources/views/layouts');
        }
     }
 }
