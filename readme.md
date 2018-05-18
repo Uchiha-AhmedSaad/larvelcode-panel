@@ -9,8 +9,10 @@ composer create-project --prefer-dist laravel/laravel blog
 Remove word blog and write your folder project name.
 
 ## Note:- you must make laravel like in real server i give you an example:-
-1- rename server.php to index.php
-2- copy .htaccess from public directory to your larvel project main directory i mean in your larvel project directory 
+
+1- rename server.php to index.php.
+
+2- copy .htaccess from public directory to your larvel project main directory i mean in your larvel project directory .
 
 Using Composer
 
