@@ -39,6 +39,7 @@ open app/Http/kernal.php on protected $routeMiddleware add this
 From your application,  in your controller.
 
 ```
+php artisan storage:link
 php artisan make:auth
 
 
