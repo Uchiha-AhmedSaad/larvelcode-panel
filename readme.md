@@ -51,6 +51,8 @@ php artisan make:auth
 
 php artisan vendor:publish
 
+php artisan make:migrate
+
 ```
 
 and then press 0 to copy all files in directory
@@ -59,4 +61,8 @@ now you adminpanel ready to start go to :-
 ``` 
 http://your-host/adminpanel
 ```
+your username Email is:- admin@domain.com
+              password:- 123456
 change your-host with your host or localhost if you are in local environment.
+
+
