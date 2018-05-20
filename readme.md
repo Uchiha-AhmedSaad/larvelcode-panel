@@ -54,3 +54,9 @@ php artisan vendor:publish
 ```
 
 and then press 0 to copy all files in directory
+
+now you adminpanel ready to start go to :-
+``` 
+http://your-host/adminpanel
+```
+change your-host with your host or localhost if you are in local environment.
