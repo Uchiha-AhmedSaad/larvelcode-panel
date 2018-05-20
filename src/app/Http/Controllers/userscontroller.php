@@ -105,7 +105,7 @@ class userscontroller extends Controller
 			{
 				$this->validate($request,['email' =>'required|email|max:255|unique:users']);
 				$user ->update(['email'   => $request->email]);
-				if ($slug == Auth::user()->slug) 
+				if (empty($request->input('password'))) 
 				{
 					Auth::logout();
 					return redirect('/login');
