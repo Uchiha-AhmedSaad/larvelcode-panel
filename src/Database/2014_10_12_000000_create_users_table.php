@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use larvelcode\panel\functions\helperfunction;
 
 class CreateUsersTable extends Migration
 {
@@ -29,11 +30,11 @@ class CreateUsersTable extends Migration
         DB::table('users')->insert(
         array(
 
-        'name'            => 'Ahmed Saad',
+        'name'            => 'Admin',
         'permission'      => '1',
-        'slug'            => str_slug('Ahmed Saad'),
-        'email'           => 'ahmed@4serv.net',
-        'password'        => '$2y$10$hqeUq/klkoP1rehWy18D5.TiulMt7L3iBZ28dACGIc2J3ivSq6JkS',
+        'slug'            => helperfunction::slug('Ahmed Saad'),
+        'email'           => 'admin@domain.com',
+        'password'        => '$2y$10$XrJfb0ZP9XBZYPtXFENbbOY1rIx0mWNV2ObDpzUe2sAwF22GUrzca',
         'career'          => 'Web Developer',
         'information'     => 'My Name Is Ahmed saad',
         'online'          => date('Y-m-d h-i-s'),
