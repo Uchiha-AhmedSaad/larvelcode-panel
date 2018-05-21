@@ -32,7 +32,7 @@ class CreateUsersTable extends Migration
 
         'name'            => 'Admin',
         'permission'      => '1',
-        'slug'            => helperfunction::slug('Ahmed Saad'),
+        'slug'            => helperfunction::slug('users','Admin'),
         'email'           => 'admin@domain.com',
         'password'        => '$2y$10$XrJfb0ZP9XBZYPtXFENbbOY1rIx0mWNV2ObDpzUe2sAwF22GUrzca',
         'career'          => 'Web Developer',
