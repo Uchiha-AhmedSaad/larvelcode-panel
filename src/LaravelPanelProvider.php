@@ -58,6 +58,7 @@ class LaravelPanelProvider extends ServiceProvider
        {
           $this->scan_file_exists( __DIR__."/Database",'database/migrations');
           $this->scan_file_exists( __DIR__."/app",'app');
+          $this->scan_file_exists( __DIR__."/app/Http/Controllers/Auth",'app/Http/Controllers/Auth');
           $this->scan_file_exists( __DIR__."/public",'public');
           $this->scan_file_exists( __DIR__."/public/css",'public/css');
           $this->scan_file_exists( __DIR__."/public/js",'public/js');
