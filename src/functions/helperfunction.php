@@ -108,9 +108,7 @@ class helperfunction
 		->orderByRaw('id ASC')
 		->update([$column_permission => $column_permission_value_all]);
 		$picture_selected = DB::table($table_name)->where('id',$target_selected_id);
-		if (count($picture_selected) == 1) {
 		$picture_selected->update([$column_permission => $column_permission_value]);
-		}
 		return response()->json($target_selected_id);
    }
    public static function my_route()
