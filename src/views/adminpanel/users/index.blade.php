@@ -27,7 +27,7 @@
                     <table id="example2" class="table table-hover">
                       <thead>
                         <tr>
-                          <th>ID</th>
+                          <th>Id</th>
                           <th>UserName</th>
                           <th>Email</th>
                           <th>Registeration at</th>
