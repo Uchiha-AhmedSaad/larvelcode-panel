@@ -53,7 +53,7 @@
                             <td> 
                                 <a href="{{ Route('edit_user',$userinfo->slug) }}" class="btn btn-danger btn-outline btn-rounded btn-sm fa fa-edit" role="button"> Edit  </a> 
                             <td> 
-                              @if($userinfo->permission != 1)
+                              @if($userinfo->id != 1)
                                 <deleteelement :userinfo="{{$userinfo}}"></deleteelement>
                               @endif
                             </td>
