@@ -101,25 +101,22 @@ class userscontroller extends Controller
 				'slug'          => helperfunction::slug('users',$request->name)
 				]);
 			}
-			if ($request->input('email') !== $user->email) 
+			if ($request->input('email') !== $user->email OR 
+				!empty($request->input('password'))) 
 			{
-				$this->validate($request,['email' =>'required|email|max:255|unique:users']);
-				$user ->update(['email'   => $request->email]);
-				if (empty($request->input('password'))) 
-				{
-					Auth::logout();
-					return redirect('/login');
+				if ($request->input('email') !== $user->email) {
+					$this->validate($request,['email' =>'required|email|max:255|unique:users']);
+					$user ->update(['email'   => $request->email]);
 				}
-			}
-			if (!empty($request->input('password'))) 
-			{  
-				$this->validate($request,['password' =>'required|min:6|confirmed']);
-				$password = bcrypt($request->password);
-				$user->update(['password' => $password ]);
+				if (!empty($request->input('password'))) {
+					$this->validate($request,['password' =>'required|min:6|confirmed']);
+					$password = bcrypt($request->password);
+					$user->update(['password' => $password ]);
+				}
 				if ($slug == Auth::user()->slug) 
 				{
 					Auth::logout();
-					return redirect(url('/login'));
+					return redirect('/login');
 				}
 			}
 			if ($request->file('picture')) {
