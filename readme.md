@@ -38,6 +38,12 @@ open app/Http/kernal.php on protected $routeMiddleware add this
 ```php
 'admin'      =>\App\Http\Middleware\IsAdmin::class,
 ```
+add to app/provider/AuthServiceProvider
+```php 
+    protected $policies = [
+        'App\User' => 'App\Policies\UserPolicy',
+    ];
+```
 ## Usage
 
 ### Basic
