@@ -86,7 +86,10 @@ class userscontroller extends Controller
     }
 	public function update($slug,Request $request)
 	{
+
 		$user = User::where('slug','=',$slug)->first();
+
+		$this->authorize('update',$user);
 		if (isset($user)) 
 		{
 			$this->validate($request,['name' =>'required|min:4']);
